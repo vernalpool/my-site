@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Painting
+permalink: /painting/
+---
+
+
+<section class="masonry" aria-label="Painting gallery">
+  {% for p in paintings %}
+    <figure class="masonry__item">
+      <img class="masonry__img" src="{{ p.image }}" alt="{{ p.alt }}" loading="lazy" />
+      <figcaption class="masonry__cap">
+        <span class="masonry__title">{{ p.title }}</span>
+        <span class="masonry__meta">{{ p.year }}</span>
+      </figcaption>
+    </figure>
+  {% endfor %}
+</section>

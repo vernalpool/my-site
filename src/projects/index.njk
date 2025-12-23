@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: Projects
+---
+
+<h1>Projects</h1>
+
+<ul>
+  {% for project in collections.projects | reverse %}
+    <li>
+      <a href="{{ project.url }}">{{ project.data.title }}</a>
+      {% if project.data.year %} ({{ project.data.year }}){% endif %}
+    </li>
+  {% endfor %}
+</ul>
